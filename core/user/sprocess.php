@@ -1,5 +1,7 @@
 <?php
 // echo "server document root is ".$_SERVER['DOCUMENT_ROOT'];
+
+//just delete the 'resume' from the path and it will work
 if(file_exists($_SERVER['DOCUMENT_ROOT']."/resume/core/init.php")){
   require($_SERVER['DOCUMENT_ROOT']."/resume/core/init.php");
 }
