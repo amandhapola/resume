@@ -275,7 +275,7 @@ require('core/init.php');
 <div class="container" id="wrap">
 <div class="row">
         <div class="col-md-6 col-md-offset-3">
-<form action="core/user/sprocess.php" method="post" accept-charset="utf-8" class="form" role="form" id="form" name="submit">
+<form action="./core/user/sprocess.php" method="post" accept-charset="utf-8" class="form" role="form" id="form" name="submit">
   <legend><center>Sign Up</center></legend>
   <h4>It's free and always will be.</h4>
   <div class="row">
@@ -286,7 +286,7 @@ require('core/init.php');
   </div>
   <input type="text" name="email" value="" class="form-control input-lg" placeholder="Your Email" id="email"/>
   <input type="password" name="password" value="" class="form-control input-lg" placeholder="Password"  id="password"/>
-  <input type="password" name="confirm_password" value="" class="form-control input-lg" placeholder="Confirm Password" id="cpassword" />                   
+  <input type="password" name="confirm_password" value="" class="form-control input-lg" placeholder="Confirm Password" id="cpassword" />
   <label id="bdate">Birth Date</label>
 <div class="row">
   <div class="col-xs-4 col-md-4">
@@ -303,7 +303,7 @@ require('core/init.php');
           <option value="10">Oct</option>
           <option value="11">Nov</option>
           <option value="12">Dec</option>
-      </select>  
+      </select>
   </div>
   <div class="col-xs-4 col-md-4">
     <select name="day" class = "form-control input-lg">
@@ -338,55 +338,10 @@ require('core/init.php');
       <option value="29">29</option>
       <option value="30">30</option>
       <option value="31">31</option>
-    </select>                        
+    </select>
   </div>
   <div class="col-xs-4 col-md-4">
       <select name="year" class = "form-control input-lg">
-        <option value="1935">1935</option>
-        <option value="1936">1936</option>
-        <option value="1937">1937</option>
-        <option value="1938">1938</option>
-        <option value="1939">1939</option>
-        <option value="1940">1940</option>
-        <option value="1941">1941</option>
-        <option value="1942">1942</option>
-        <option value="1943">1943</option>
-        <option value="1944">1944</option>
-        <option value="1945">1945</option>
-        <option value="1946">1946</option>
-        <option value="1947">1947</option>
-        <option value="1948">1948</option>
-        <option value="1949">1949</option>
-        <option value="1950">1950</option>
-        <option value="1951">1951</option>
-        <option value="1952">1952</option>
-        <option value="1953">1953</option>
-        <option value="1954">1954</option>
-        <option value="1955">1955</option>
-        <option value="1956">1956</option>
-        <option value="1957">1957</option>
-        <option value="1958">1958</option>
-        <option value="1959">1959</option>
-        <option value="1960">1960</option>
-        <option value="1961">1961</option>
-        <option value="1962">1962</option>
-        <option value="1963">1963</option>
-        <option value="1964">1964</option>
-        <option value="1965">1965</option>
-        <option value="1966">1966</option>
-        <option value="1967">1967</option>
-        <option value="1968">1968</option>
-        <option value="1969">1969</option>
-        <option value="1970">1970</option>
-        <option value="1971">1971</option>
-        <option value="1972">1972</option>
-        <option value="1973">1973</option>
-        <option value="1974">1974</option>
-        <option value="1975">1975</option>
-        <option value="1976">1976</option>
-        <option value="1977">1977</option>
-        <option value="1978">1978</option>
-        <option value="1979">1979</option>
         <option value="1980">1980</option>
         <option value="1981">1981</option>
         <option value="1982">1982</option>
@@ -421,7 +376,7 @@ require('core/init.php');
         <option value="2011">2011</option>
         <option value="2012">2012</option>
         <option value="2013">2013</option>
-    </select>    
+    </select>
   </div>
 </div>
  <label>Gender : </label>
@@ -438,9 +393,9 @@ require('core/init.php');
 <button name ="submit" class="btn btn-lg btn-primary btn-block signup-btn" id="btn" type="submit">
 Create my account
 </button>
-  </form>          
+  </form>
       </div>
-</div>            
+</div>
 </div>
 </div>
 
@@ -478,6 +433,9 @@ var password=$("#password");
 });
 </script>
 <script type="text/javascript">
+$("#form").submit(function{
+  alert("thank you");
+});
 $(function(){
 $("#form").submit(function(){
   $(document).find(".error").remove();
@@ -525,7 +483,7 @@ $("#form").submit(function(){
       email.focus();
       return false;
   }
-  
+
   if(!emailRule.test(email.val())){
       $("#email").after("<span class='error'>Please enter a valid email</span>");
       $(".error").slideDown();
